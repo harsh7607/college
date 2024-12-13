@@ -1,0 +1,1511 @@
+/* General CSS */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+:root {
+
+  /* Background Color */
+  --bg-white:#fff;
+
+  /* Text Colors */
+  --primary-text: #061738;
+  --secondary-color: #60cd12;
+  --light-color: #e2f6de;
+  --dark-color: #03262c;
+  --text-white: #fff;
+  --text-gray: #dee2e6;
+  --anchor-color: #007aff;
+
+  /* Font Family */
+  --primary-font: 'Barlow Condensed', sans-serif;
+  --secondary-font: 'Roboto', sans-serif;
+}
+
+
+
+/* Body styling */
+body,
+html {
+    color: var(--primary-text);
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+
+
+
+/* ===========================
+Header Section
+============================== */
+
+.header {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  max-height: 113px;
+  margin-right: 10px;
+  margin-top: -3rem;
+}
+
+/* Navigation Menu Styles */
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color:#60cd12;
+}
+
+/* Right side icons and login */
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.text-lg-end {
+  display: flex;
+  align-items: center;
+}
+
+.text-lg-end a {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+/* WhatsApp icon */
+.fab.fa-whatsapp {
+  color: #25D366;
+  font-size: 24px;
+}
+
+/* Login button */
+.loginbtn {
+  background-color: #F44770;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.loginbtn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.header .navbar-toggler {
+  color: #F44770;
+  font-size: 2rem;
+  height: 2.7rem;
+  padding: 0;
+}
+
+.header .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.header-scrolled {
+  position: fixed;
+  top: -0.4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+  z-index: 999;
+  /* box-shadow: .5084rem 1.1419rem 2.5rem 0 rgb(0 0 0 / 8%); */
+  transition: 0.3s ease-in-out;
+}
+/* ===========================
+Header Section Exit
+============================== */
+
+
+
+
+
+/* ===========================
+Hero Section
+============================== */
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image-file/clg.avif');
+  background-size: cover;
+  background-position: center; /* Background color for the hero section */
+  color: white; /* Text color */
+  padding: 60px 20px; /* Padding for spacing */
+  text-align: center; /* Center the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.container {
+  max-width: 1200px; /* Maximum width for larger screens */
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Heading Styles */
+.hero h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  
+}
+
+.hero p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  line-height: 2.9;
+  color: #f4f4f4;
+}
+
+/* Form Styling */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-form input {
+  padding: 15px 30px;
+  width: 90%;
+  max-width: 430px; /* Limit the maximum width of the input */
+  font-size: 1.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 4rem;
+  margin-bottom: 0rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-form input:focus {
+  border-color: #0056b3;
+}
+
+.hero .search-form button {
+  padding: 15px 30px;
+  background-color: #F44770; 
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .search-form button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero p {
+      font-size: 2rem;
+  }
+
+  .search-form input {
+      width: 80%;
+  }
+
+  .search-form button {
+      width: 100%;
+      margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      padding: 40px 20px;
+  }
+
+  .hero h1 {
+      font-size: 2.7rem;
+  }
+
+  .hero p {
+      font-size: 1.77rem;
+  }
+
+  .search-form input {
+      width: 90%;
+  }
+
+  .search-form button {
+      width: 100%;
+      margin-top: 24px;
+  }
+
+
+}
+
+/* ===========================
+Hero Section Exit
+============================== */
+
+
+
+
+/* ===========================
+Notification Section
+============================== */
+.company-container {
+    width: 100%;
+    padding: 53px;
+}
+
+.company-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3.3rem;
+    color: #333;
+    text-align: center;
+
+}
+
+/* Grid container */
+.company-grid {
+    display: flex;
+    overflow-x: auto;
+    background:  rgb(248, 77, 3) ;
+    gap: 10rem;
+    padding: 1.725rem ;
+    scroll-snap-type: x mandatory;
+}
+
+.company-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100px;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.company-logo img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 5px;
+}
+
+.logo-txt {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+    .company-container {
+        padding: 15px;
+    }
+
+    .company-title {
+        font-size: 20px;
+    }
+
+    .company-grid {
+        gap: 10px;
+    }
+
+    .company-logo {
+        width: 80px;
+    }
+
+    .company-logo img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .logo-txt {
+        font-size: 12px;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+    .company-title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .company-grid {
+        gap: 5px;
+    }
+
+    .company-logo {
+        width: 70px;
+    }
+
+    .company-logo img {
+        max-width: 35px;
+        max-height: 35px;
+    }
+
+    .logo-txt {
+        font-size: 10px;
+    }
+}
+
+/* ===========================
+Notification Section Exit
+============================== */
+
+
+
+
+
+/* ===========================
+About Section
+============================== */
+.about-us {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.pic {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text {
+  flex: 1;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.data {
+  margin-top: 20px;
+}
+
+.Read {
+  background-color: #F44770;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.Read:hover {
+  background-color:#0056b3;
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .pic {
+      max-width: 90%;
+      margin-bottom: 20px;
+  }
+
+  h2 {
+      font-size: 24px;
+  }
+
+  p {
+      font-size: 16px;
+  }
+
+  .Read {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .Read {
+      font-size: 12px;
+      padding: 8px 15px;
+  }
+}
+/* ===========================
+About Section Exit
+============================== */
+
+
+
+
+
+
+
+/* ===========================
+College List Section
+============================== */
+
+  .college-list{
+    text-align: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .college-list h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+  
+  .college-cards {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+  
+  .college-card {
+    width: 250px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .college-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+   
+  }
+  
+  .college-card h3 {
+    margin-top: 10px;
+    font-size: 23px;
+    margin: 15px 0;
+    color: #333;
+  }
+  
+  .college-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .college-card button {
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color:#F44770;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .college-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Hover Effect for College Cards */
+.college-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .college-list h2 {
+        font-size: 28px;
+    }
+
+    .college-card h3 {
+        font-size: 20px;
+    }
+
+    .college-card p {
+        font-size: 14px;
+    }
+
+    .college-card button {
+        font-size: 14px;
+    }
+}
+/* ===========================
+College List Section Exit
+============================== */
+
+
+
+
+
+/* ===========================
+Review Section
+============================== */
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+
+}
+
+.section__container h2 {
+  font-weight: 600;
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10rem;
+  
+}
+
+.section__container h1 {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.section__container h1::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 5rem;
+  background-color: #149e9e;
+}
+
+.section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 10rem;
+  
+}
+
+.section__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 11rem 2rem 2rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.section__card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #149e9e;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.section__card span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.section__card h4 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #149e9e;
+  transition: 0.3s;
+}
+
+.section__card p {
+  margin-bottom: 2rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgb(30, 30, 30);
+  transition: 0.3s;
+  font-weight: 350;
+}
+
+.section__card img {
+  margin-bottom: 1rem;
+  max-width: 100px;
+  border-radius: 100%;
+  border: 2px solid #149e9e;
+  transition: 0.3s;
+}
+
+.section__card h5 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #149e9e;
+  transition: 0.3s;
+}
+
+.section__card h6 {
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: rgb(30, 30, 30);
+  transition: 0.3s;
+}
+
+.section__card:hover::before {
+  width: 400%;
+}
+
+.section__card:hover :is(h4, h5) {
+  color:#ffffff;
+}
+
+.section__card:hover :is(p, h6) {
+  color: #e8e8e8;
+}
+
+.section__card:hover img {
+  border-color: #ffffff;
+}
+
+/* ===========================
+Review Section Exit
+============================== */
+
+
+
+
+
+/* ===========================
+Contact Section
+============================== */
+.contact-container {
+  display: flex;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+
+.contact-info {
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+  margin-left: 3rem;
+  margin-bottom: 30px;
+  
+}
+
+.contact-info h2 {
+  font-size: 2.733rem;
+  margin-top: 9px;
+  color: rgb(24, 108, 217);
+}
+
+.contact-info address {
+  font-size: 1.535rem;
+  color: #555;
+}
+
+.contact-info address p {
+  margin: 3rem 0;
+}
+
+.contact-info strong {
+  font-weight: bolder;
+}
+
+.contact-info .social-media ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 20px;
+}
+
+.contact-info .social-media ul li {
+  margin-right: 15px;
+}
+
+.contact-info .social-media ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ 
+.registration-form {
+  padding: 20px;
+  flex: 1;
+  min-width: 180px;
+  max-width: 50%;
+  margin-right: 1rem;
+}
+
+.registration-form h3 {
+  font-size: 2.215rem;
+  margin-bottom: 15px;
+  color: rgb(24, 108, 217);
+}
+
+
+form input{
+  width: 80%;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  box-sizing: border-box;
+}
+
+
+
+form input:hover{
+transform: scale(1.05);;
+box-shadow: 0 4px 8px rbga(0,0,0,0.2);
+border: 1px solid #333;
+
+}
+
+form button {
+  background: #F44770;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 2rem;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-info,
+  .registration-form {
+      width: 100%;
+      margin-bottom: 30px;
+  }
+
+  .social-media {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info h2 {
+      font-size: 20px;
+  }
+
+  .contact-info address p {
+      font-size: 14px;
+  }
+
+  .social-icon {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .registration-form h3 {
+      font-size: 20px;
+  }
+
+  form label {
+      font-size: 13px;
+  }
+
+  form input,
+  form textarea,
+  form button {
+      padding: 10px;
+  }
+
+  form button {
+      font-size: 14px;
+  }
+}
+/* ===========================
+Contact Section Exit
+============================== */
+
+
+
+
+
+
+/* ===========================
+Footer Section 
+============================== */
+
+.footer-container{
+  background-color: var(--background-color);
+  margin: 0 auto;
+  padding: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+}
+
+.footer{
+  max-width: 1280px;
+  padding:1.2rem 2.4rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+
+.footer-top{
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-top .logo-svg {
+  width: 267px;
+  height: auto;
+  margin-right: auto;
+}
+
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 58%;
+  grid-gap: 6.97rem;
+  padding-top: 2rem;
+}
+
+.footer-grid-heading{
+  font-size: 1.925rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-left: 2rem;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0rem;
+  
+}
+.footer-link{
+  color: #777;
+  font-size: 1.575rem;
+  text-decoration: none;
+
+}
+.footer-links-list{
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.footer-links-list ul li a:hover{
+  color: #0056b3;
+}
+
+
+.footer-grid-heading{
+  margin-bottom: 1.65rem;
+}
+
+.footer-copyright{
+  color: #777;
+  font-size: 1.75rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.15rem;
+  text-align: center;
+  font-weight: bolder;
+  border-top: 1.5px solid #E5E7EB;
+}
+
+@media screen and (max-width:1080px) {
+  .footer{
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-top{
+      padding-left: auto;
+  }
+  .footer-grid{
+      align-self: center;
+      justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width:850px) {
+  .footer-top{
+      padding-left: auto;
+  }
+  .footer-grid{
+      grid-template-columns: repeat(2,1fr);
+  }
+}    
+ /* ===========================
+Footer Section Exit
+============================== */ 
+
+
+ 
+
+
+
+/* ===========================
+Contact Page CSS
+============================== */
+input,textarea, a{
+  font-family: 'Roboto', sans-serif;
+}
+#section-wrapper{
+  width: 100%;
+  padding: 10px;
+}
+.box-wrapper{
+  position: relative;
+  display: table;
+  width:1100px;
+  margin:auto;
+  margin-top:35px;
+  border-radius: 30px;
+}
+.info-wrap{
+  width:35%;
+  height: 551px;
+  padding: 40px;
+  float: left;
+  display: block;
+  border-radius: 30px 0px 0px 30px;
+  background: linear-gradient(144deg, rgba(126,39,156,1) 0%, rgba(49,39,157,1) 49%);
+  color: #fff;
+}
+.info-title{
+  text-align: left;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.info-sub-title{
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 17px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+}
+.info-details {
+  list-style: none;
+  margin: 60px 0px;
+}
+.info-details li {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #fff;
+}
+.info-details li i {
+  background: #F44770;
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.info-details li a {
+  color: #fff;
+  text-decoration: none;
+}
+.info-details li a:hover {
+  color: #F44770;
+}
+.social-icons {
+  list-style: none;
+  text-align: center;
+  margin: 20px 0px;
+}
+.social-icons li {
+  display: inline-block;
+}
+.social-icons li i {
+  background: #F44770;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 22%;
+  margin: 0px 5px;
+  cursor: pointer;
+  transition: all .5s;
+}
+.social-icons li i:hover {
+  background: #fff;
+  color: #000000;
+}
+.form-wrap{
+    width:65%;
+    float: right;
+    padding:40px 25px 35px 25px;
+    border-radius: 0px 30px 30px 0px;
+    background: #ecf0f3;
+}
+.form-title{
+    text-align: left;
+    margin-left: 23px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+/* General styles for the form container  */
+.form-fields {
+  margin: 0 auto;
+  display: table;
+  width: 100%;
+  padding: 15px 5px 5px 5px;
+}
+
+/* Style for each form group   */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Style for input fields      */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  outline:none;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input fields      */
+.form-group input:hover {
+  border-color: #007bff;
+  outline: none;
+}
+.form-group textarea:hover {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Style for placeholder text         */ 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Style for textarea         */      
+.form-group textarea {
+  resize: vertical; /* Allow resizing of the textarea vertically   */
+  min-height: 100px;
+}
+
+/* Responsive design for smaller screens   */
+@media (max-width: 600px) {
+  .form-fields {
+      padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 14px;
+  }
+}
+
+.submit-button{
+    width: 96%;
+    height: 60px;
+    margin: 0px 12px;
+    border-radius: 30px;
+    font-size: 20px;;
+    font-weight: 700;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    color:#fff;
+    text-align: center;
+    background: #F44770;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    transition: .5s;
+}
+.submit-button:hover{
+    background: #31279d;
+}
+
+
+/* Responsive css   */
+
+@media only screen and (max-width: 767px) {
+  .box-wrapper{
+      width: 100%;
+  }
+  .info-wrap,
+  .form-wrap{
+      width: 100%;
+      height: inherit;
+      float: none;  
+  }
+  .info-wrap{
+      border-radius: 30px 30px 0px 0px;
+  }
+  .form-wrap{
+      border-radius: 0px 0px 30px 30px;
+  }
+  .form-group{
+      width: 100%;
+      float: none;
+      margin: 25px 0px;
+  }
+  .form-fields .form-group:last-child, 
+  .submit-button{
+      width: 100%;
+  }
+  .submit-button{
+      margin: 10px 0px;
+  }
+ 
+} 
+/* ===========================
+Contact Us Page CSS Exit
+============================== */ 
+
+
+
+
+
+/* ===========================
+About Us Page CSS
+============================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2.section-title {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+p.section-subtitle {
+  font-size: 18px;
+  color: #7f8c8d;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.about_section {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+/* Flexbox Layout for About Section */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left, .text-right {
+  padding: 20px;
+  max-width: 50%;
+  box-sizing: border-box;
+  color: #555;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+/* Left and Right Content Styling */
+.about-left, .about-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+.pic-left, .pic-right {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.about-left .text-left, .about-right .text-right {
+  width: 55%;
+}
+
+.about-end p{
+  box-sizing: border-box;
+  color: #555;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .about-left, .about-right {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .pic-left, .pic-right {
+      width: 70%;
+      margin-bottom: 20px;
+  }
+
+  .about-left .text-left, .about-right .text-right {
+      width: 100%;
+  }
+
+  h2.section-title {
+      font-size: 28px;
+  }
+
+  p.section-subtitle {
+      font-size: 16px;
+  }
+}
+/* ===========================
+About Us Page CSS Exit
+============================== */
+
+
+
+
+
+/* ===========================
+404 Error Page CSS
+============================== */
+.Error_section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.Error_section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Error_section .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Error_section .col-lg-7 img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.Error_section .col-lg-5 {
+  padding: 20px;
+  text-align: center;
+}
+
+.Error_section .section-title {
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.Error_section p {
+  font-size: 2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.Error_section .main-btn {
+  padding: 12px 30px;
+  background-color: #F44770; /* Primary button color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  transition: background-color 0.3s ease;
+}
+
+.Error_section .main-btn:hover {
+  background-color: #392dc6; /* Darker shade of the primary color */
+  color: #fff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .Error_section .row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .Error_section .col-lg-7 {
+      margin-bottom: 20px;
+  }
+
+  .Error_section .section-title {
+      font-size: 2rem;
+  }
+
+  .Error_section p {
+      font-size: 1rem;
+  }
+}
+/* ===========================
+404 Error Page CSS Exit
+============================== */
